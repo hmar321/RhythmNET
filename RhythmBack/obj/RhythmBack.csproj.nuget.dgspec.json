@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\VSComunity\\RhythmBack\\RhythmBack.csproj": {}
+    "C:\\GitHub\\RhythmNET\\RhythmBack\\RhythmBack.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\VSComunity\\RhythmBack.Data\\RhythmBack.Data.csproj": {
+    "C:\\GitHub\\RhythmNET\\RhythmBack\\RhythmBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\VSComunity\\RhythmBack.Data\\RhythmBack.Data.csproj",
-        "projectName": "RhythmBack.Data",
-        "projectPath": "C:\\GitHub\\VSComunity\\RhythmBack.Data\\RhythmBack.Data.csproj",
+        "projectUniqueName": "C:\\GitHub\\RhythmNET\\RhythmBack\\RhythmBack.csproj",
+        "projectName": "RhythmBack",
+        "projectPath": "C:\\GitHub\\RhythmNET\\RhythmBack\\RhythmBack.csproj",
         "packagesPath": "C:\\Users\\mgx20\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\VSComunity\\RhythmBack.Data\\obj\\",
+        "outputPath": "C:\\GitHub\\RhythmNET\\RhythmBack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mgx20\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,87 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\GitHub\\VSComunity\\RhythmBack.Model\\RhythmBack.Model.csproj": {
-                "projectPath": "C:\\GitHub\\VSComunity\\RhythmBack.Model\\RhythmBack.Model.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.5, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\GitHub\\VSComunity\\RhythmBack.Model\\RhythmBack.Model.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\GitHub\\VSComunity\\RhythmBack.Model\\RhythmBack.Model.csproj",
-        "projectName": "RhythmBack.Model",
-        "projectPath": "C:\\GitHub\\VSComunity\\RhythmBack.Model\\RhythmBack.Model.csproj",
-        "packagesPath": "C:\\Users\\mgx20\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\VSComunity\\RhythmBack.Model\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\mgx20\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -144,77 +64,6 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[7.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\GitHub\\VSComunity\\RhythmBack\\RhythmBack.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\GitHub\\VSComunity\\RhythmBack\\RhythmBack.csproj",
-        "projectName": "RhythmBack",
-        "projectPath": "C:\\GitHub\\VSComunity\\RhythmBack\\RhythmBack.csproj",
-        "packagesPath": "C:\\Users\\mgx20\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\VSComunity\\RhythmBack\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\mgx20\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\GitHub\\VSComunity\\RhythmBack.Data\\RhythmBack.Data.csproj": {
-                "projectPath": "C:\\GitHub\\VSComunity\\RhythmBack.Data\\RhythmBack.Data.csproj"
-              },
-              "C:\\GitHub\\VSComunity\\RhythmBack.Model\\RhythmBack.Model.csproj": {
-                "projectPath": "C:\\GitHub\\VSComunity\\RhythmBack.Model\\RhythmBack.Model.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.5, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

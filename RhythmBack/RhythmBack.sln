@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhythmBack", "RhythmBack.csproj", "{11A3A2C3-36D5-4623-8B2F-0957BDE074EF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhythmBack.Data", "..\RhythmBack.Data\RhythmBack.Data.csproj", "{6B34769A-608D-4F46-827A-1AD7DC392CA1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhythmBack.Model", "..\RhythmBack.Model\RhythmBack.Model.csproj", "{CFF6D836-7D11-41EA-A332-193E99E640A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RhythmBack", "RhythmBack.csproj", "{11A3A2C3-36D5-4623-8B2F-0957BDE074EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +15,6 @@ Global
 		{11A3A2C3-36D5-4623-8B2F-0957BDE074EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11A3A2C3-36D5-4623-8B2F-0957BDE074EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11A3A2C3-36D5-4623-8B2F-0957BDE074EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B34769A-608D-4F46-827A-1AD7DC392CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B34769A-608D-4F46-827A-1AD7DC392CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B34769A-608D-4F46-827A-1AD7DC392CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B34769A-608D-4F46-827A-1AD7DC392CA1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CFF6D836-7D11-41EA-A332-193E99E640A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFF6D836-7D11-41EA-A332-193E99E640A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CFF6D836-7D11-41EA-A332-193E99E640A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CFF6D836-7D11-41EA-A332-193E99E640A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

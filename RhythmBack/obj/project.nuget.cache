@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "igTAk+LeE5BXECr9mKK+rkjpnqO96URGWmCuxXNPczVO7J4GZt+EMwLP0WxWiOnHfBhCNFy7wV8fKPF1rbqMZw==",
+  "dgSpecHash": "A0YoDM1r5K/PPE+FccdLrYkTBB0EUQW33vVZ2ZozDnjptXWEX9HwCkGplRCnsAxSVSPOMAOOAmmBCax90fTF6g==",
   "success": true,
-  "projectFilePath": "C:\\GitHub\\VSComunity\\RhythmBack\\RhythmBack.csproj",
+  "projectFilePath": "C:\\GitHub\\RhythmNET\\RhythmBack\\RhythmBack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mgx20\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\mgx20\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -529,36 +529,6 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
-      },
-      "RhythmBack.Data/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.5",
-          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
-          "RhythmBack.Model": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/RhythmBack.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RhythmBack.Data.dll": {}
-        }
-      },
-      "RhythmBack.Model/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "AutoMapper": "12.0.1",
-          "Microsoft.EntityFrameworkCore": "7.0.5",
-          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
-        },
-        "compile": {
-          "bin/placeholder/RhythmBack.Model.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RhythmBack.Model.dll": {}
-        }
       }
     }
   },
@@ -1626,23 +1596,15 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "RhythmBack.Data/1.0.0": {
-      "type": "project",
-      "path": "../RhythmBack.Data/RhythmBack.Data.csproj",
-      "msbuildProject": "../RhythmBack.Data/RhythmBack.Data.csproj"
-    },
-    "RhythmBack.Model/1.0.0": {
-      "type": "project",
-      "path": "../RhythmBack.Model/RhythmBack.Model.csproj",
-      "msbuildProject": "../RhythmBack.Model/RhythmBack.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AutoMapper >= 12.0.1",
+      "Microsoft.EntityFrameworkCore >= 7.0.5",
+      "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
-      "RhythmBack.Data >= 1.0.0",
-      "RhythmBack.Model >= 1.0.0",
+      "Pomelo.EntityFrameworkCore.MySql >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -1652,11 +1614,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\VSComunity\\RhythmBack\\RhythmBack.csproj",
+      "projectUniqueName": "C:\\GitHub\\RhythmNET\\RhythmBack\\RhythmBack.csproj",
       "projectName": "RhythmBack",
-      "projectPath": "C:\\GitHub\\VSComunity\\RhythmBack\\RhythmBack.csproj",
+      "projectPath": "C:\\GitHub\\RhythmNET\\RhythmBack\\RhythmBack.csproj",
       "packagesPath": "C:\\Users\\mgx20\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\VSComunity\\RhythmBack\\obj\\",
+      "outputPath": "C:\\GitHub\\RhythmNET\\RhythmBack\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mgx20\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1673,14 +1635,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\GitHub\\VSComunity\\RhythmBack.Data\\RhythmBack.Data.csproj": {
-              "projectPath": "C:\\GitHub\\VSComunity\\RhythmBack.Data\\RhythmBack.Data.csproj"
-            },
-            "C:\\GitHub\\VSComunity\\RhythmBack.Model\\RhythmBack.Model.csproj": {
-              "projectPath": "C:\\GitHub\\VSComunity\\RhythmBack.Model\\RhythmBack.Model.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -1693,11 +1648,29 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[12.0.1, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.5, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[7.0.5, )"
+          },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.5, )"
+          },
+          "Pomelo.EntityFrameworkCore.MySql": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

@@ -1,7 +1,6 @@
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using RhythmBack.Model.Context;
-using RhythmBack.Model.Models;
 using RhythmBack.Model.Util;
 using System.Text.Json.Serialization;
 

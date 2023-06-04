@@ -1,8 +1,13 @@
+C:\GitHub\RhythmNET\bin\Debug\net6.0\out\out\web.config
 C:\GitHub\RhythmNET\bin\Debug\net6.0\out\web.config
 C:\GitHub\RhythmNET\bin\Debug\net6.0\appsettings.Development.json
 C:\GitHub\RhythmNET\bin\Debug\net6.0\appsettings.json
 C:\GitHub\RhythmNET\bin\Debug\net6.0\out\appsettings.Development.json
 C:\GitHub\RhythmNET\bin\Debug\net6.0\out\appsettings.json
+C:\GitHub\RhythmNET\bin\Debug\net6.0\out\out\appsettings.Development.json
+C:\GitHub\RhythmNET\bin\Debug\net6.0\out\out\appsettings.json
+C:\GitHub\RhythmNET\bin\Debug\net6.0\out\out\RhythmBack.deps.json
+C:\GitHub\RhythmNET\bin\Debug\net6.0\out\out\RhythmBack.runtimeconfig.json
 C:\GitHub\RhythmNET\bin\Debug\net6.0\out\RhythmBack.deps.json
 C:\GitHub\RhythmNET\bin\Debug\net6.0\out\RhythmBack.runtimeconfig.json
 C:\GitHub\RhythmNET\bin\Debug\net6.0\RhythmBack.exe

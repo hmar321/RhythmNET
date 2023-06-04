@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RhythmBack.Data.Repository;
 using RhythmBack.Model.Context;
 using RhythmBack.Model.Models;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 using RhythmBack.Model.DTO;
-using RhythmBack.Model.Util;
 using AutoMapper;
 
 namespace RhythmBack.Controllers

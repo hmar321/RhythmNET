@@ -10,7 +10,6 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.5",
-          "Microsoft.EntityFrameworkCore.Analyzers": "7.0.5",
           "Microsoft.EntityFrameworkCore.Design": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",

@@ -50,7 +50,7 @@ namespace RhythmBack.Controllers
         public async Task<ActionResult<Usuario>> Create(UsuarioDTO usuarioDto)
         {
             var usuario=_mapper.Map<Usuario>(usuarioDto);
-            usuario.Rol=_dbContext.Roles.FirstOrDefault(r=>r.Nombre == "Usuario");
+            usuario.Rol=_dbContext.Roles!.FirstOrDefault(r=>r.Nombre == "Usuario");
             await _repository.AddAsync(usuario);
             return CreatedAtAction(nameof(GetById), new { id = usuario.Id }, usuario);
         }

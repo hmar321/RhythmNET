@@ -1602,6 +1602,7 @@
     "net6.0": [
       "AutoMapper >= 12.0.1",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
+      "Microsoft.EntityFrameworkCore.Analyzers >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "Pomelo.EntityFrameworkCore.MySql >= 7.0.0",
@@ -1653,6 +1654,10 @@
             "version": "[12.0.1, )"
           },
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.5, )"
+          },
+          "Microsoft.EntityFrameworkCore.Analyzers": {
             "target": "Package",
             "version": "[7.0.5, )"
           },

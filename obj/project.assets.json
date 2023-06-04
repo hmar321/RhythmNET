@@ -1614,11 +1614,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\RhythmNET\\RhythmBack\\RhythmBack.csproj",
+      "projectUniqueName": "C:\\GitHub\\RhythmNET\\RhythmBack.csproj",
       "projectName": "RhythmBack",
-      "projectPath": "C:\\GitHub\\RhythmNET\\RhythmBack\\RhythmBack.csproj",
+      "projectPath": "C:\\GitHub\\RhythmNET\\RhythmBack.csproj",
       "packagesPath": "C:\\Users\\mgx20\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\RhythmNET\\RhythmBack\\obj\\",
+      "outputPath": "C:\\GitHub\\RhythmNET\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mgx20\\AppData\\Roaming\\NuGet\\NuGet.Config",

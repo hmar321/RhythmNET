@@ -4,7 +4,6 @@ using RhythmBack.Data.Repository;
 using RhythmBack.Model.Context;
 using RhythmBack.Model.DTO;
 using RhythmBack.Model.Models;
-using RhythmBack.Model.Util;
 
 namespace RhythmBack.Controllers
 {

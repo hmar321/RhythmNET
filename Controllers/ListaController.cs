@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RhythmBack.Data.Interface;
 using RhythmBack.Data.Repository;
 using RhythmBack.Model.Context;
 using RhythmBack.Model.DTO;
 using RhythmBack.Model.Models;
-using System.Collections.Generic;
 
 namespace RhythmBack.Controllers
 {

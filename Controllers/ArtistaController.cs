@@ -1,8 +1,5 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using RhythmBack.Data.Interface;
 using RhythmBack.Data.Repository;
 using RhythmBack.Model.Context;
 using RhythmBack.Model.DTO;

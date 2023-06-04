@@ -1,11 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using RhythmBack.Data.Interface;
+﻿using Microsoft.AspNetCore.Mvc;
 using RhythmBack.Data.Repository;
 using RhythmBack.Model.Context;
 using RhythmBack.Model.Models;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 using AutoMapper;
 using RhythmBack.Model.DTO;
 

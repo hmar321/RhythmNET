@@ -1,0 +1,14 @@
+C:\GitHub\VSComunity\RhythmBack.Model\bin\Debug\net6.0\RhythmBack.Model.deps.json
+C:\GitHub\VSComunity\RhythmBack.Model\bin\Debug\net6.0\RhythmBack.Model.runtimeconfig.json
+C:\GitHub\VSComunity\RhythmBack.Model\bin\Debug\net6.0\RhythmBack.Model.dll
+C:\GitHub\VSComunity\RhythmBack.Model\bin\Debug\net6.0\RhythmBack.Model.pdb
+C:\GitHub\VSComunity\RhythmBack.Model\obj\Debug\net6.0\RhythmBack.Model.csproj.AssemblyReference.cache
+C:\GitHub\VSComunity\RhythmBack.Model\obj\Debug\net6.0\RhythmBack.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\VSComunity\RhythmBack.Model\obj\Debug\net6.0\RhythmBack.Model.AssemblyInfoInputs.cache
+C:\GitHub\VSComunity\RhythmBack.Model\obj\Debug\net6.0\RhythmBack.Model.AssemblyInfo.cs
+C:\GitHub\VSComunity\RhythmBack.Model\obj\Debug\net6.0\RhythmBack.Model.csproj.CoreCompileInputs.cache
+C:\GitHub\VSComunity\RhythmBack.Model\obj\Debug\net6.0\RhythmBack.Model.dll
+C:\GitHub\VSComunity\RhythmBack.Model\obj\Debug\net6.0\refint\RhythmBack.Model.dll
+C:\GitHub\VSComunity\RhythmBack.Model\obj\Debug\net6.0\RhythmBack.Model.pdb
+C:\GitHub\VSComunity\RhythmBack.Model\obj\Debug\net6.0\RhythmBack.Model.genruntimeconfig.cache
+C:\GitHub\VSComunity\RhythmBack.Model\obj\Debug\net6.0\ref\RhythmBack.Model.dll

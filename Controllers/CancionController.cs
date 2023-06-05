@@ -106,5 +106,21 @@ namespace RhythmBack.Controllers
             }
             return Ok(cancionesDto);
         }
+        [HttpGet("BuscadorForLista")]
+        public async Task<ActionResult<IEnumerable<ArtistaDTO>>> GetByTituloForLista([FromQuery] string termino, [FromQuery]int idLista)
+        {
+            var canciones = await _cancionRepository.GetByTituloAsyncForLista(termino,idLista);
+            if (canciones == null)
+                return NotFound();
+            var cancionesDto = _mapper.Map<IEnumerable<CancionDTO>>(canciones);
+            foreach (var cancionDto in cancionesDto)
+            {
+                cancionDto.Portada = await _cancionRepository.GetPortadaEstrenoAsync(cancionDto.Id);
+                cancionDto.Artistas = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
+                cancionDto.Estreno = await _cancionRepository.GetEstrenoAsync(cancionDto.Id);
+            }
+            return Ok(cancionesDto);
+        }
+
     }
 }

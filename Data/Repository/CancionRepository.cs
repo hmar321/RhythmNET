@@ -67,5 +67,23 @@ namespace RhythmBack.Data.Repository
                                  select al.Estreno).FirstOrDefaultAsync();
             return estreno ?? DateTime.MinValue;
         }
+
+        public async Task<IEnumerable<Cancion>> GetByTituloAsyncForLista(string termino,int idLista)
+        {
+            var todos = await (from ca in _context.Canciones!.Include(ca=>ca.Artistas).Include(ca=>ca.Albums)
+                               from al in ca.Albums!
+                               where al.Id != idLista
+                               select ca).Distinct().ToListAsync();
+            var canciones = todos
+                .Select(ca => new { Cancion = ca, Distance = Format.FormatearTexto(ca.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) })
+                .Where(x =>
+                    Format.FormatearTexto(x.Cancion.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    Format.FormatearTexto(x.Cancion.Artistas!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    Format.FormatearTexto(x.Cancion.Albums!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0)
+                .OrderByDescending(x => x.Distance)
+                .Take(10)
+                .Select(x => x.Cancion).Distinct().ToList();
+            return canciones;
+        }
     }
 }

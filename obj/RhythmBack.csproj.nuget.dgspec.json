@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hector.mauricio\\Documents\\GitHub\\RhythmNET\\RhythmBack.csproj": {}
+    "C:\\GitHub\\RhythmNET\\RhythmBack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hector.mauricio\\Documents\\GitHub\\RhythmNET\\RhythmBack.csproj": {
+    "C:\\GitHub\\RhythmNET\\RhythmBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hector.mauricio\\Documents\\GitHub\\RhythmNET\\RhythmBack.csproj",
+        "projectUniqueName": "C:\\GitHub\\RhythmNET\\RhythmBack.csproj",
         "projectName": "RhythmBack",
-        "projectPath": "C:\\Users\\hector.mauricio\\Documents\\GitHub\\RhythmNET\\RhythmBack.csproj",
-        "packagesPath": "C:\\Users\\hector.mauricio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hector.mauricio\\Documents\\GitHub\\RhythmNET\\obj\\",
+        "projectPath": "C:\\GitHub\\RhythmNET\\RhythmBack.csproj",
+        "packagesPath": "C:\\Users\\mgx20\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\RhythmNET\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hector.mauricio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mgx20\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

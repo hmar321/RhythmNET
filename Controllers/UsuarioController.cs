@@ -45,8 +45,9 @@ namespace RhythmBack.Controllers
         [HttpPost]
         public async Task<ActionResult<Usuario>> Create(UsuarioDTO usuarioDto)
         {
-            var usuario=_mapper.Map<Usuario>(usuarioDto);
-            usuario.Rol=_dbContext.Roles!.FirstOrDefault(r=>r.Nombre == "Usuario");
+            var usuario = _mapper.Map<Usuario>(usuarioDto);
+            usuario.Rol = _dbContext.Roles!.FirstOrDefault(r => r.Nombre == "Usuario");
+            usuario.ListasCreadas = new List<Lista> { new Lista { Titulo = "Favoritos", Portada = "Favoritos.png", Visitas = 0 } };
             await _repository.AddAsync(usuario);
             return CreatedAtAction(nameof(GetById), new { id = usuario.Id }, usuario);
         }

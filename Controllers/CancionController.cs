@@ -121,6 +121,108 @@ namespace RhythmBack.Controllers
             }
             return Ok(cancionesDto);
         }
+        [HttpPut("AddLista")]
+        public async Task<IActionResult> AddListaIntoListasCollectionAsync([FromQuery] int id, [FromQuery] int idElemento)
+        {
+            var cancionDb = await _repository.GetByIdAsync(id, u => u.Listas!);
+            if (cancionDb == null)
+                return NotFound();
+            var lista = (from li in cancionDb.Listas where li.Id == idElemento select li).FirstOrDefault();
+            if (lista != null)
+                return NotFound("Elemento ya insertado");
+            await _repository.AddElementToColeccionAsync<Lista>(id, idElemento, o => o.Listas!, e => e.Canciones!);
+            return NoContent();
+        }
 
+        [HttpDelete("QuitarLista")]
+        public async Task<IActionResult> RemoveListaFromListasCollectionAsync([FromQuery] int id, [FromQuery] int idElemento)
+        {
+            var cancionDb = await _repository.GetByIdAsync(id, li => li.Listas!);
+            if (cancionDb == null)
+                return NotFound();
+            var lista = (from ca in cancionDb.Listas where ca.Id == idElemento select ca).FirstOrDefault();
+            if (lista == null)
+                return NotFound();
+            await _repository.RemoveElementFromColeccionAsync<Lista>(id, idElemento, o => o.Listas!, e => e.Canciones!);
+            return NoContent();
+        }
+
+        [HttpPut("AddAlbum")]
+        public async Task<IActionResult> AddAlbumIntoAlbumsCollectionAsync([FromQuery] int id, [FromQuery] int idElemento)
+        {
+            var cancionDb = await _repository.GetByIdAsync(id, u => u.Albums!);
+            if (cancionDb == null)
+                return NotFound();
+            var album = (from al in cancionDb.Albums where al.Id == idElemento select al).FirstOrDefault();
+            if (album != null)
+                return NotFound("Elemento ya insertado");
+            await _repository.AddElementToColeccionAsync<Album>(id, idElemento, o => o.Albums!, e => e.Canciones!);
+            return NoContent();
+        }
+
+        [HttpDelete("QuitarAlbum")]
+        public async Task<IActionResult> RemoveAlbumFromAlbumsCollectionAsync([FromQuery] int id, [FromQuery] int idElemento)
+        {
+            var cancionDb = await _repository.GetByIdAsync(id, li => li.Albums!);
+            if (cancionDb == null)
+                return NotFound();
+            var album = (from al in cancionDb.Albums where al.Id == idElemento select al).FirstOrDefault();
+            if (album == null)
+                return NotFound();
+            await _repository.RemoveElementFromColeccionAsync<Album>(id, idElemento, o => o.Albums!, e => e.Canciones!);
+            return NoContent();
+        }
+
+        [HttpPut("AddArtista")]
+        public async Task<IActionResult> AddArtistaIntoArtistasCollectionAsync([FromQuery] int id, [FromQuery] int idElemento)
+        {
+            var cancionDb = await _repository.GetByIdAsync(id, u => u.Artistas!);
+            if (cancionDb == null)
+                return NotFound();
+            var artista = (from ar in cancionDb.Artistas where ar.Id == idElemento select ar).FirstOrDefault();
+            if (artista != null)
+                return NotFound("Elemento ya insertado");
+            await _repository.AddElementToColeccionAsync<Artista>(id, idElemento, o => o.Artistas!, e => e.Canciones!);
+            return NoContent();
+        }
+
+        [HttpDelete("QuitarArtista")]
+        public async Task<IActionResult> RemoveArtistaFromArtistasCollectionAsync([FromQuery] int id, [FromQuery] int idElemento)
+        {
+            var cancionDb = await _repository.GetByIdAsync(id, li => li.Artistas!);
+            if (cancionDb == null)
+                return NotFound();
+            var artista = (from ca in cancionDb.Artistas where ca.Id == idElemento select ca).FirstOrDefault();
+            if (artista == null)
+                return NotFound();
+            await _repository.RemoveElementFromColeccionAsync<Artista>(id, idElemento, o => o.Artistas!, e => e.Canciones!);
+            return NoContent();
+        }
+
+        [HttpPut("AddGenero")]
+        public async Task<IActionResult> AddGeneroIntoGenerosCollectionAsync([FromQuery] int id, [FromQuery] int idElemento)
+        {
+            var cancionDb = await _repository.GetByIdAsync(id, u => u.Generos!);
+            if (cancionDb == null)
+                return NotFound();
+            var genero = (from ge in cancionDb.Generos where ge.Id == idElemento select ge).FirstOrDefault();
+            if (genero != null)
+                return NotFound("Elemento ya insertado");
+            await _repository.AddElementToColeccionAsync<Genero>(id, idElemento, o => o.Generos!, e => e.Canciones!);
+            return NoContent();
+        }
+
+        [HttpDelete("QuitarGenero")]
+        public async Task<IActionResult> RemoveGeneroFromGenerosCollectionAsync([FromQuery] int id, [FromQuery] int idElemento)
+        {
+            var cancionDb = await _repository.GetByIdAsync(id, li => li.Generos!);
+            if (cancionDb == null)
+                return NotFound();
+            var genero = (from ca in cancionDb.Generos where ca.Id == idElemento select ca).FirstOrDefault();
+            if (genero == null)
+                return NotFound();
+            await _repository.RemoveElementFromColeccionAsync<Genero>(id, idElemento, o => o.Generos!, e => e.Canciones!);
+            return NoContent();
+        }
     }
 }

@@ -29,7 +29,7 @@ builder.Services.AddCors(options =>
 
 
 builder.Services.AddDbContext<RhythmDBContext>(options =>
-    options.UseMySql(builder.Configuration.GetConnectionString("MySqlConnection"), ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("MySqlConnection"))), ServiceLifetime.Scoped
+    options.UseMySql(builder.Configuration.GetConnectionString("MySqlRailWay"), ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("MySqlRailWay"))), ServiceLifetime.Scoped
 );
 //MySqlRailWay
 //MySqlConnection

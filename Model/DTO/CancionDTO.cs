@@ -9,7 +9,7 @@
         public TimeSpan? Duracion { get; set; }
         public DateTime Estreno { get; set; }
         public string? Lyrics { get; set; }
-        public string? Artistas { get; set; }
+        public string? ArtistasCadena { get; set; }
         public bool? EnFavorito { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using RhythmBack.Model.Context;
 using RhythmBack.Model.Models;
 using RhythmBack.Model.DTO;
 using AutoMapper;
+using RhythmBack.Data.Interface;
 
 namespace RhythmBack.Controllers
 {
@@ -14,14 +15,14 @@ namespace RhythmBack.Controllers
         private readonly IMapper _mapper;
         private readonly RhythmDBContext _dbContext;
         private readonly Repository<Genero> _repository;
-        private readonly GeneroRepository _repositoryRepository;
+        private readonly GeneroRepository _generoRepository;
 
         public GeneroController(RhythmDBContext context,IMapper mapper)
         {
 
             _dbContext = context;
             _repository = new Repository<Genero>(_dbContext);
-            _repositoryRepository=new GeneroRepository(_dbContext);
+            _generoRepository=new GeneroRepository(_dbContext);
             _mapper = mapper;
         }
 
@@ -42,6 +43,10 @@ namespace RhythmBack.Controllers
             if (genero == null)
                 return NotFound();
             var generoDto = _mapper.Map<GeneroDTO>(genero);
+            foreach (var cancionDto in generoDto.Canciones!)
+            {
+                cancionDto.ArtistasCadena = await _generoRepository.GetArtistasConcatByCancionIdAsync(cancionDto.Id);
+            }
             return Ok(generoDto);
         }
         [HttpPost]

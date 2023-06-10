@@ -38,5 +38,21 @@ namespace RhythmBack.Data.Repository
 
             return await exitos.ToListAsync();
         }
+        public async Task<string> GetArtistasConcatByCancionIdAsync(int id)
+        {
+            var titulos = await (from ca in _context.Canciones
+                                 where ca.Id == id
+                                 from al in ca.Albums!
+                                 from ar in ca.Artistas!
+                                 select ar.Titulo).Distinct().ToListAsync();
+            var resultado = String.Join(", ", titulos);
+            int index = resultado.IndexOf(",");
+            if (index >= 0)
+            {
+                resultado = resultado.Remove(index, 1);
+                resultado = resultado.Insert(index, @" ft.");
+            }
+            return resultado;
+        }
     }
 }

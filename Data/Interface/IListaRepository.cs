@@ -6,5 +6,6 @@ namespace RhythmBack.Data.Interface
     {
         Task<IEnumerable<Lista>> GetByTituloAsync(string termino, int id);
         Task<IEnumerable<Lista>> GetExitosAsync(int id);
+        Task<string> GetArtistasConcatByCancionIdAsync(int id);
     }
 }

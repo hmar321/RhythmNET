@@ -61,6 +61,10 @@ namespace RhythmBack.Controllers
                 return NotFound();
             var listaDto = _mapper.Map<ListaDTO>(lista);
             listaDto.CreadorNick = lista.Creador!.Nick;
+            foreach (var cancionDto in listaDto.Canciones!)
+            {
+                cancionDto.ArtistasCadena = await _listaRepository.GetArtistasConcatByCancionIdAsync(cancionDto.Id);
+            }
             return Ok(listaDto);
         }
         [HttpPost]
@@ -72,8 +76,9 @@ namespace RhythmBack.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Lista lista)
+        public async Task<IActionResult> Update(int id, ListaDTO listaDto)
         {
+            var lista = _mapper.Map<Lista>(listaDto);
             if (id != lista.Id)
             {
                 return BadRequest();

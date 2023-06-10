@@ -33,7 +33,7 @@ namespace RhythmBack.Controllers
             foreach (var cancionDto in cancionesDto)
             {
                 cancionDto.Portada = await _cancionRepository.GetPortadaEstrenoAsync(cancionDto.Id);
-                cancionDto.Artistas = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
+                cancionDto.ArtistasCadena = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
             }
             return Ok(cancionesDto);
         }
@@ -48,13 +48,13 @@ namespace RhythmBack.Controllers
             foreach (var cancionDto in cancionesDto)
             {
                 cancionDto.Portada = await _cancionRepository.GetPortadaEstrenoAsync(cancionDto.Id);
-                cancionDto.Artistas = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
+                cancionDto.ArtistasCadena = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
                 cancionDto.Estreno = await _cancionRepository.GetEstrenoAsync(cancionDto.Id);
             }
             return Ok(cancionesDto);
         }
 
-            [HttpGet("{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<Cancion>> GetById(int id)
         {
             var cancion = await _repository.GetByIdAsync(id);
@@ -62,7 +62,7 @@ namespace RhythmBack.Controllers
                 return NotFound();
             var cancionDto = _mapper.Map<CancionDTO>(cancion);
             cancionDto.Portada = await _cancionRepository.GetPortadaEstrenoAsync(cancionDto.Id);
-            cancionDto.Artistas = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
+            cancionDto.ArtistasCadena = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
             cancionDto.Estreno = await _cancionRepository.GetEstrenoAsync(cancionDto.Id);
             return Ok(cancionDto);
         }
@@ -74,8 +74,9 @@ namespace RhythmBack.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Cancion cancion)
+        public async Task<IActionResult> Update(int id, CancionDTO cancionDto)
         {
+            var cancion = _mapper.Map<Cancion>(cancionDto);
             if (id != cancion.Id)
                 return BadRequest();
             await _repository.UpdateAsync(cancion);
@@ -101,22 +102,22 @@ namespace RhythmBack.Controllers
             foreach (var cancionDto in cancionesDto)
             {
                 cancionDto.Portada = await _cancionRepository.GetPortadaEstrenoAsync(cancionDto.Id);
-                cancionDto.Artistas = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
+                cancionDto.ArtistasCadena = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
                 cancionDto.Estreno = await _cancionRepository.GetEstrenoAsync(cancionDto.Id);
             }
             return Ok(cancionesDto);
         }
         [HttpGet("BuscadorForLista")]
-        public async Task<ActionResult<IEnumerable<ArtistaDTO>>> GetByTituloForLista([FromQuery] string termino, [FromQuery]int idLista)
+        public async Task<ActionResult<IEnumerable<ArtistaDTO>>> GetByTituloForLista([FromQuery] string termino, [FromQuery] int idLista)
         {
-            var canciones = await _cancionRepository.GetByTituloAsyncForLista(termino,idLista);
+            var canciones = await _cancionRepository.GetByTituloAsyncForLista(termino, idLista);
             if (canciones == null)
                 return NotFound();
             var cancionesDto = _mapper.Map<IEnumerable<CancionDTO>>(canciones);
             foreach (var cancionDto in cancionesDto)
             {
                 cancionDto.Portada = await _cancionRepository.GetPortadaEstrenoAsync(cancionDto.Id);
-                cancionDto.Artistas = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
+                cancionDto.ArtistasCadena = await _cancionRepository.GetArtistasConcatAsync(cancionDto.Id);
                 cancionDto.Estreno = await _cancionRepository.GetEstrenoAsync(cancionDto.Id);
             }
             return Ok(cancionesDto);

@@ -34,7 +34,7 @@ namespace RhythmBack.Controllers
             {
                 var albums = await _artistaRepository.GetAlbumsByArtistaId(artistaDto.Id);
                 var albumsDto = _mapper.Map<IEnumerable<AlbumDTO>>(albums);
-                artistaDto.Albums = albumsDto.OrderBy(al => al.Artistas).ToList();
+                artistaDto.Albums = albumsDto.OrderBy(al => al.ArtistasCadena).ToList();
             }
             return Ok(artistasDto);
         }
@@ -50,7 +50,7 @@ namespace RhythmBack.Controllers
             var albumsDto = _mapper.Map<IEnumerable<AlbumDTO>>(albums);
             foreach (var albumDto in albumsDto)
             {
-                albumDto.Artistas = await _artistaRepository.GetArtistasTituloConcatByAlbumIdAsync(albumDto.Id);
+                albumDto.ArtistasCadena = await _artistaRepository.GetArtistasTituloConcatByAlbumIdAsync(albumDto.Id);
                 var canciones = await _artistaRepository.GetCancionesByAlbumIdAsync(albumDto.Id);
                 var cancionesDto = _mapper.Map<IEnumerable<CancionDTO>>(canciones);
                 albumDto.Canciones = cancionesDto.ToList();
@@ -66,8 +66,9 @@ namespace RhythmBack.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Artista artista)
+        public async Task<IActionResult> Update(int id, ArtistaDTO artistaDto)
         {
+            var artista=_mapper.Map<Artista>(artistaDto);
             if (id != artista.Id)
             {
                 return BadRequest();
@@ -115,7 +116,7 @@ namespace RhythmBack.Controllers
             {
                 var albums = await _artistaRepository.GetAlbumsByArtistaId(artistaDto.Id);
                 var albumsDto = _mapper.Map<IEnumerable<AlbumDTO>>(albums);
-                artistaDto.Albums = albumsDto.OrderBy(al => al.Artistas).ToList();
+                artistaDto.Albums = albumsDto.OrderBy(al => al.ArtistasCadena).ToList();
             }
             return Ok(artistasDto);
         }

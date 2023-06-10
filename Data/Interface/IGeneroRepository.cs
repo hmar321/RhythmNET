@@ -2,6 +2,6 @@
 {
     public interface IGeneroRepository
     {
-        //Task<Genero> GetAll();
+        Task<string> GetArtistasConcatByCancionIdAsync(int id);
     }
 }

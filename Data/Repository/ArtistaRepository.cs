@@ -18,11 +18,11 @@ namespace RhythmBack.Data.Repository
         {
             var todos = await _context.Artistas!.Include(ar=>ar.Canciones)!.ThenInclude(ca=>ca.Albums).ToListAsync();
             var artistas = todos
-                .Select(ar => new { Artista = ar, Distance = Format.FormatearTexto(ar.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) })
+                .Select(ar => new { Artista = ar, Distance = Format.FormatearTexto(ar.Titulo!).IndexOf(Format.FormatearTexto(termino)) })
                 .Where(x => 
-                Format.FormatearTexto(x.Artista.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0 ||
-                Format.FormatearTexto(x.Artista.Canciones!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0 ||
-                Format.FormatearTexto(x.Artista.Canciones!.FirstOrDefault()!.Albums!.FirstOrDefault()?.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0
+                Format.FormatearTexto(x.Artista.Titulo!).IndexOf(Format.FormatearTexto(termino)) >= 0 ||
+                Format.FormatearTexto(x.Artista.Canciones!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino)) >= 0 ||
+                Format.FormatearTexto(x.Artista.Canciones!.FirstOrDefault()!.Albums!.FirstOrDefault()?.Titulo!).IndexOf(Format.FormatearTexto(termino)) >= 0
                 )
                 .OrderByDescending(x => x.Distance)
                 .Take(10)

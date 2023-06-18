@@ -1,6 +1,7 @@
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using RhythmBack.Model.Context;
+using RhythmBack.Model.Models;
 using RhythmBack.Model.Util;
 using System.Text.Json.Serialization;
 
@@ -33,8 +34,8 @@ builder.Services.AddDbContext<RhythmDBContext>(options =>
 );
 //MySqlRailWay
 //MySqlConnection
-var app = builder.Build();
 
+var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {

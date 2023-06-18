@@ -17,11 +17,11 @@ namespace RhythmBack.Data.Repository
         {
             var todos = await _context.Listas!.Include(li => li.Canciones).Include(li=>li.Creador).ToListAsync();
             var listas = todos
-                .Where(li => li.Creador!.Id != id && li.Titulo!= "Favoritos")
-                .Select(li => new { Lista = li, Distance = Format.FormatearTexto(li.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) })
+                .Where(li => li.Creador!.Id != id && li.Portada!= "Favoritos.png")
+                .Select(li => new { Lista = li, Distance = Format.FormatearTexto(li.Titulo!).IndexOf(Format.FormatearTexto(termino)) })
                 .Where(x => 
-                    Format.FormatearTexto(x.Lista.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0 ||
-                    Format.FormatearTexto(x.Lista.Creador!.Nick!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0)
+                    Format.FormatearTexto(x.Lista.Titulo!).IndexOf(Format.FormatearTexto(termino)) >= 0 ||
+                    Format.FormatearTexto(x.Lista.Creador!.Nick!).IndexOf(Format.FormatearTexto(termino)) >= 0)
                 .OrderByDescending(x => x.Distance)
                 .Take(10)
                 .Select(x => x.Lista).Distinct().ToList();

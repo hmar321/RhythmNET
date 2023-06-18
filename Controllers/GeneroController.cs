@@ -4,7 +4,6 @@ using RhythmBack.Model.Context;
 using RhythmBack.Model.Models;
 using RhythmBack.Model.DTO;
 using AutoMapper;
-using RhythmBack.Data.Interface;
 
 namespace RhythmBack.Controllers
 {

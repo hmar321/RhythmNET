@@ -76,6 +76,7 @@ namespace RhythmBack.Controllers
         }
 
         [HttpPut("{id}")]
+        //url1
         public async Task<IActionResult> Update(int id, ListaDTO listaDto)
         {
             var lista = _mapper.Map<Lista>(listaDto);

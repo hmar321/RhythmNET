@@ -30,11 +30,11 @@ namespace RhythmBack.Data.Repository
         {
             var todos = await _context.Canciones!.Include(ca => ca.Artistas).Include(ca => ca.Albums).ToListAsync();
             var canciones = todos
-                .Select(ca => new { Cancion = ca, Distance = Format.FormatearTexto(ca.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) })
+                .Select(ca => new { Cancion = ca, Distance = Format.FormatearTexto(ca.Titulo!).IndexOf(Format.FormatearTexto(termino)) })
                 .Where(x =>
-                    Format.FormatearTexto(x.Cancion.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0 ||
-                    Format.FormatearTexto(x.Cancion.Artistas!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0 ||
-                    Format.FormatearTexto(x.Cancion.Albums!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0)
+                    Format.FormatearTexto(x.Cancion.Titulo!).IndexOf(Format.FormatearTexto(termino)) >= 0 ||
+                    Format.FormatearTexto(x.Cancion.Artistas!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino)) >= 0 ||
+                    Format.FormatearTexto(x.Cancion.Albums!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino)) >= 0)
                 .OrderByDescending(x => x.Distance)
                 .Take(10)
                 .Select(x => x.Cancion).Distinct().ToList();
@@ -75,11 +75,11 @@ namespace RhythmBack.Data.Repository
                                where al.Id != idLista
                                select ca).Distinct().ToListAsync();
             var canciones = todos
-                .Select(ca => new { Cancion = ca, Distance = Format.FormatearTexto(ca.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) })
+                .Select(ca => new { Cancion = ca, Distance = Format.FormatearTexto(ca.Titulo!).IndexOf(Format.FormatearTexto(termino)) })
                 .Where(x =>
-                    Format.FormatearTexto(x.Cancion.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0 ||
-                    Format.FormatearTexto(x.Cancion.Artistas!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0 ||
-                    Format.FormatearTexto(x.Cancion.Albums!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino), StringComparison.OrdinalIgnoreCase) >= 0)
+                    Format.FormatearTexto(x.Cancion.Titulo!).IndexOf(Format.FormatearTexto(termino)) >= 0 ||
+                    Format.FormatearTexto(x.Cancion.Artistas!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino)) >= 0 ||
+                    Format.FormatearTexto(x.Cancion.Albums!.FirstOrDefault()!.Titulo!).IndexOf(Format.FormatearTexto(termino)) >= 0)
                 .OrderByDescending(x => x.Distance)
                 .Take(10)
                 .Select(x => x.Cancion).Distinct().ToList();
